@@ -1,11 +1,10 @@
-
-
+import Home from "./pages/Home/Home"
 
 const App = () => {
 
   return (
     <>
-      Meu Portifólio
+      <Home />
     </>
   )
 }
