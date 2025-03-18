@@ -11,11 +11,17 @@ const Hero = () => {
         backgroundColor: theme.palette.primary.main,
         height: "100vh",
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
+        [theme.breakpoints.up('xs')]: {
+            paddingTop: "30px",
+        },
+        [theme.breakpoints.up('md')]: {
+            paddingTop: "0",
+        }
     }))
 
     const StyledImg = styled("img")(({ theme }) => ({
-        width: "80%",
+        width: "75%",
         borderRadius: "50%",
         border: `1px solid ${theme.palette.primary.contrastText}`
     }))
@@ -35,8 +41,8 @@ const Hero = () => {
                         <Grid size={{ xs: 12, md: 7 }}>
                             <Typography variant="h1" color="primary.constrastText" textAlign="center" paddingBottom={2}>Pedro Cecilio</Typography>
                             <Typography variant="h2" color="primary.constrastText" textAlign="center">Sou Desenvolvedor de Sistemas</Typography>
-                            <Grid container display="flex" justifyContent="center" spacing={3}>
-                                <Grid size={{ xs: 12, md: 4 }} display="flex" justifyContent="center" paddingBottom={3}>
+                            <Grid container display="flex" justifyContent="center" spacing={3} paddingTop={3}>
+                                <Grid size={{ xs: 12, md: 4 }} display="flex" justifyContent="center">
                                     <StyledButton>
                                         <DownloadIcon />
                                         <Typography>
